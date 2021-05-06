@@ -28,7 +28,33 @@
     Para usar string interpolation basta colocar um $ no ínicio da string
     ai coloca as variáveis dentro de chaves.
     $"Eu sou um texto {variavelAqui}"
+*/
 
+// Conhecendo o C# 
+/*
+    1 - O que é e como funciona o C# 
+
+    Foi dado uma explicação de como o C# funciona, basicamente ele compila
+    para exe ou dll, depois utilizar o JIT para executar na linha de comando
+    que o programa foi chamado, se não quiser utilizar a sua linha de comando
+    basta clicar no exe que o mesmo executa.
+
+    2 - Estrutura de programa
+
+    Os principais conceitos organizacionais são :
+        Programas
+        Namespaces
+        Tipos
+        Membros
+        Assemblies
+    Os programas declaram tipos, em que estes podem ter membros e serem 
+    organizados em namespaces. 
+    Classes e interfaces são exemplos de tipos  
+    Campos, métodos, atributos e eventos são exmplos de membros
+    Utilizar o conceito de organização de pastas e chamado de classes 
+    utilizando a palavra reservada using
+    Utilizar Try ... Catch, para tratamento de erros .
+    Por boas práticas recomenda utilizar o namespace de acordo com a estrutura
+    de pastas que o programa está recebendo
     
-
 */
