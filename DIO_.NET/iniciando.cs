@@ -88,3 +88,21 @@
     dessa forma diminui muito métodos que precisam retornar um valor, pois basta colocar as variáveis no parâmetro utilizando
     a anotação out e depois quando o método for utilizado já sabe que pode utilizar essa variável em outro contexto. 
 */
+
+// Trabalhando com structs, interfaces e enums
+/*
+    O que são Structs -> Armazena dados na sua estrutura, pode ter atributos e métodos. Mas seus dados contém apenas valores
+    não contém referências. Não aceitam herança e são 
+    utilizadas para coisas simples, pois seu conteúdo fica armazenado na stack. Utilizar Structs é bom para o gerenciamento
+    de memório e performace, pois assim o carbage collector não terá muito trabalho para ficar limpando memória do heap de
+    classes pequenas que poderiam ser Structs.
+
+    Entendendo a função de interfaces e enums -> Interfaces são como contratos, que podem ter atributos e métodos, elas 
+    são utilizadas quando é necessário que uma classe tenha diversas heranças, dessa forma ela terá diversas interfaces
+    entrando mais afundo no conceito de polimorfismo. Quem tiver a interface implementada, obrigatoriamente ela precisa ser
+    utilizada. Interface podem herdar outras interfaces, geralmente utilizadas para fazer agrupamentos de interfaces
+
+    Enum -> É um tipo de valor que contém valores do tipo constantes. Os valores das enums nunca são modificadas, elas servem
+    apenas para distribuir valores. ELas servem para pegar os valores discretos (valores mágicos) e dar um conceito 
+    para deixar o seu código mais semântico. Dessa forma é possível utilizar esse conceito para referenciar o valor.
+*/
