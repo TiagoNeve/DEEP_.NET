@@ -1,0 +1,16 @@
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\Projeto_1.exe
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\Projeto_1.deps.json
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\Projeto_1.runtimeconfig.json
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\Projeto_1.runtimeconfig.dev.json
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\Projeto_1.dll
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\ref\Projeto_1.dll
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\bin\Debug\net5.0\Projeto_1.pdb
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.csprojAssemblyReference.cache
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.AssemblyInfoInputs.cache
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.AssemblyInfo.cs
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.csproj.CoreCompileInputs.cache
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.dll
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\ref\Projeto_1.dll
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.pdb
+C:\Users\Stuler\Documents\STUDIES\C#\DIO_.NET\Projeto_1\obj\Debug\net5.0\Projeto_1.genruntimeconfig.cache
