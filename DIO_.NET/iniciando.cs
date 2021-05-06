@@ -56,5 +56,12 @@
     Utilizar Try ... Catch, para tratamento de erros .
     Por boas práticas recomenda utilizar o namespace de acordo com a estrutura
     de pastas que o programa está recebendo
-    
+
+*/
+
+// Conhecendo variáveis e instruções
+/*
+    C# possui muitos tipos para se trabalhar, pois cada tipo tem uma forma
+    específica de se guardar na memória e como a memória irá limitar de 
+    acordo com o tipo.
 */
