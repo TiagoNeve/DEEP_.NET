@@ -65,3 +65,26 @@
     específica de se guardar na memória e como a memória irá limitar de 
     acordo com o tipo.
 */
+
+// Classes e objetos essenciais em C#
+/*
+    Classes e objetos -> São os tipos mais essenciais em c#, nelas são agrupados os estados ou campos e também os métodos
+    Permite a criar os objetos e basicamente todo programa em c# tem que ter classes.
+
+    Os objetos são as instâncias das classes. Como o C# utiliza a programação orientada a objetos, junto com ela vem todos
+    os conceitos de POO, como herança, polimorfismo. 
+    Para criar um novo objeto basta usar a palavra reservada [new], ela cria uma instância de uma classe, gerando um objeto
+    O bom de utilizar o C# é que ele possui a função carbage collector, em que toda memória que não está sendo usada ela
+    perde o seu local e é substituida por uma que está sendo utilizada, gerando uma performace maior ao programa.
+
+    Como aplicar classes e objetos em projetos -> Para herdar de um classe basta criar um classe e colocar : e depois a 
+    classe que a primeira irá herdar. Os métodos estáticos são utilizados apenas pela classe, não podem ser utilizados pela
+    suas instâncias, os métodos protegidos podem ser utilizados por outras classes que recebem a classe do método como 
+    herança, os métodos virtuais podem ter seu conteúdo sobrescrito pela palavra chave override, os métodos privates só 
+    podem ser utilizados pelas suas classes. 
+    A nomeclatura [ref] informa que a variável em questão vai ser utilizada como referência e caso seja substituida um novo
+    valor não será criado, mas sim a referência irá receber um novo valor, dessa forma o conteúdo será substituído.
+    A notação [out] permite criar um método que joga para fora variáveis que podem ser utilizadas fora do contexto do método
+    dessa forma diminui muito métodos que precisam retornar um valor, pois basta colocar as variáveis no parâmetro utilizando
+    a anotação out e depois quando o método for utilizado já sabe que pode utilizar essa variável em outro contexto. 
+*/
