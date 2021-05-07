@@ -106,3 +106,10 @@
     apenas para distribuir valores. ELas servem para pegar os valores discretos (valores mágicos) e dar um conceito 
     para deixar o seu código mais semântico. Dessa forma é possível utilizar esse conceito para referenciar o valor.
 */
+
+// Uma síntese do que o .NET
+/*
+    Criação do projeto: 
+    
+    dotnet new console -n [nome do projeto]
+*/
