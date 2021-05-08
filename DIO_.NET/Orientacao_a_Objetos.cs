@@ -56,3 +56,13 @@
     Ponteiro -> Aponta no local da memória outro um valor que está ocupando este local e atribui o mesmo local a uma nova
     variável criando a partir de então uma variável por refereência.
 */
+
+// O que são métodos
+/*
+    Determinam o comportamente do objeto, são ações que determinado objeto irá ter ao se instanciar uma classe.
+    Os métodos são definidos nas classes. São basicamente funções dentro de classes.
+    Métodos acessores -> São os getters e os setters, basicamente os get eles retornam o valor de algum atributo 
+    Métodos modificadores -> É os set substitui o valor do atribuito.
+    Métodos construtures -> São os constructs que basicamente toda vez que for instanciada uma classe é necessário passar
+    alguns argumentos, pois os construtores só conseguem criar um objeto se forem passados os atributos diretamente.
+*/
