@@ -66,3 +66,12 @@
     Métodos construtures -> São os constructs que basicamente toda vez que for instanciada uma classe é necessário passar
     alguns argumentos, pois os construtores só conseguem criar um objeto se forem passados os atributos diretamente.
 */
+
+// O que são propriedades e eventos
+/*
+    Propriedades -> Valores dentro de classes que recebem valores e podem ser chamadas ou modificadas.
+
+    Eventos -> É quando algo dispara quando uma situação ocorre, isso é chamado de evento, por exemplo quando um botão
+    é clicado ocorre o evento de emitir uma mensagem, soar um bipe, escrever algo na tela ou desligar o computador. Tudo
+    isso são eventos.
+*/
