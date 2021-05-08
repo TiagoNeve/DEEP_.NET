@@ -51,7 +51,17 @@ namespace projeto2
                         Console.ReadLine();
                         break;
                     case "3":
-                        // TODO: Calcular a média geral
+                        decimal notaTotal = 0;
+                        var nrAlunos = 0;
+                        for (int i = 0; i < alunos.Length; i++)
+                        {
+                            if (!String.IsNullOrEmpty(alunos[i].Nome))
+                            {
+                                notaTotal += alunos[i].Nota;
+                                nrAlunos++;
+                            }
+                        }
+                        Console.WriteLine($"A media da turma é: {notaTotal / nrAlunos}");
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
