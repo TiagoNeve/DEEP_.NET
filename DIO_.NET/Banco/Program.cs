@@ -46,6 +46,8 @@ namespace Banco
 
         private static void Transferir()
         {
+            LimparTela();
+
             Console.Write("Digite o número da conta");
             int indiceContaOrigem = int.Parse(Console.ReadLine());
 
@@ -57,10 +59,14 @@ namespace Banco
 
             listaContas[indiceContaOrigem].Transferir(valorTransferencia: valorTransferencia,
                                                       contaDestino: listaContas[indiceContaDestino]);
+
+            Continue();
         }
 
         private static void Depositar()
         {
+            LimparTela();
+
             Console.Write("Digite o número da conta");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -68,10 +74,14 @@ namespace Banco
             double valorDeposito = double.Parse(Console.ReadLine());
 
             listaContas[indiceConta].Depositar(valorDeposito);
+
+            Continue();
         }
 
         private static void Sacar()
         {
+            LimparTela();
+
             Console.Write("Digite o número da conta");
             int indiceConta = int.Parse(Console.ReadLine());
 
@@ -79,10 +89,14 @@ namespace Banco
             double valorSaque = double.Parse(Console.ReadLine());
 
             listaContas[indiceConta].Sacar(valorSaque);
+
+            Continue();
         }
 
         private static void ListarContas()
         {
+            LimparTela();
+
             Console.WriteLine("Listagem de contas Ativas");
             Console.WriteLine();
 
@@ -97,10 +111,14 @@ namespace Banco
                 Console.Write($"# {i} - ");
                 Console.WriteLine(conta);
             }
+
+            Continue();
         }
 
         private static void InserirConta()
         {
+            LimparTela();
+
             Console.WriteLine("Inserir nova conta");
 
             Console.Write("Digite 1 para a conta Física ou 2 para conta Jurídica: ");
@@ -121,26 +139,45 @@ namespace Banco
                                         Credito: entradaCredito);
 
             listaContas.Add(novaConta); // Adiciona uma nova conta na lista de contas.
+
+            Continue();
         }
 
         private static string ObterOpcaoUsuario()
         {
-            Console.WriteLine();
-            Console.WriteLine("Bank ao seu dispor");
-            Console.WriteLine("Informa a opção desejada");
+            LimparTela();
 
-            Console.WriteLine("1 - Listar contas");
-            Console.WriteLine("2 - Inserir nova conta");
-            Console.WriteLine("3 - Transferir");
-            Console.WriteLine("4 - Sacar");
-            Console.WriteLine("5 - Depositar");
-            Console.WriteLine("C - Limpar a tela");
-            Console.WriteLine("X - Sair");
+            Console.WriteLine();
+            Console.WriteLine("==========================");
+            Console.WriteLine("|    Bank ao seu dispor  |");
+            Console.WriteLine("|Informa a opção desejada|");
+            Console.WriteLine("==========================");
+            Console.WriteLine("| 1 - Listar contas      |");
+            Console.WriteLine("| 2 - Inserir nova conta |");
+            Console.WriteLine("| 3 - Transferir         |");
+            Console.WriteLine("| 4 - Sacar              |");
+            Console.WriteLine("| 5 - Depositar          |");
+            Console.WriteLine("| C - Limpar a tela      |");
+            Console.WriteLine("| X - Sair               |");
+            Console.WriteLine("==========================");
             Console.WriteLine();
 
             string opcaoUsuario = Console.ReadLine().ToUpper();
             Console.WriteLine();
             return opcaoUsuario;
         }
+
+        private static void LimparTela()
+        {
+            Console.Clear();
+        }
+
+        private static void Continue()
+        {
+            Console.WriteLine();
+            Console.Write("Digite algo para voltar ao menu");
+            Console.ReadLine();
+        }
+
     }
 }
