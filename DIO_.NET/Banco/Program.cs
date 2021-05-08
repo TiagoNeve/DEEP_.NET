@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 namespace Banco
 {
-    class Program
+    class Program : Utilidades
     {
         // Criação das listas de contas na memória:
         static List<Conta> listaContas = new List<Conta>();
 
         static void Main(string[] args)
         {
-            string opcaoUsuario = ObterOpcaoUsuario();
+            string opcaoUsuario = Utilidades.ObterOpcaoUsuario();
 
             while (opcaoUsuario != "X")
             {
@@ -34,11 +34,11 @@ namespace Banco
                         Console.Clear(); // Limpa terminal
                         break;
                     default:
-                        ForaDoRange();
+                        Utilidades.ForaDoRange();
                         break;
                 }
 
-                opcaoUsuario = ObterOpcaoUsuario();
+                opcaoUsuario = Utilidades.ObterOpcaoUsuario();
             }
 
             Console.WriteLine("Obrigado por utilizar nossos serviços.");
@@ -47,9 +47,9 @@ namespace Banco
 
         private static void ListarContas()
         {
-            LimparTela();
+            Utilidades.LimparTela();
 
-            Head();
+            Utilidades.Head();
 
             Console.WriteLine("    Listagem de contas Ativas    ");
             Console.WriteLine();
@@ -57,7 +57,7 @@ namespace Banco
             if (listaContas.Count == 0)
             {
                 Console.WriteLine("Nenhuma conta cadastrada");
-                Continue();
+                Utilidades.Continue();
                 return;
             }
 
@@ -68,14 +68,14 @@ namespace Banco
                 Console.WriteLine(conta);
             }
 
-            Continue();
+            Utilidades.Continue();
         }
 
         private static void InserirConta()
         {
-            LimparTela();
+            Utilidades.LimparTela();
 
-            Head();
+            Utilidades.Head();
 
             Console.WriteLine("     Inserir nova conta");
 
@@ -113,14 +113,14 @@ namespace Banco
 
 
 
-            Continue();
+            Utilidades.Continue();
         }
 
         private static void Transferir()
         {
-            LimparTela();
+            Utilidades.LimparTela();
 
-            Head();
+            Utilidades.Head();
 
             try
             {
@@ -146,31 +146,41 @@ namespace Banco
 
             }
 
-            Continue();
+            Utilidades.Continue();
         }
 
         private static void Sacar()
         {
-            LimparTela();
+            Utilidades.LimparTela();
 
-            Head();
+            Utilidades.Head();
+            try
+            {
+                Console.Write("Digite o número da conta: ");
+                int indiceConta = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o número da conta: ");
-            int indiceConta = int.Parse(Console.ReadLine());
+                Console.Write("Digite o quanto você que sacar: ");
+                double valorSaque = double.Parse(Console.ReadLine());
 
-            Console.Write("Digite o quanto você que sacar: ");
-            double valorSaque = double.Parse(Console.ReadLine());
+                listaContas[indiceConta].Sacar(valorSaque);
+            }
+            catch
+            {
+                Console.WriteLine();
+                Console.WriteLine("Algum erro ocorreu");
+                Console.WriteLine("  -  Verifique se o número da conta é válido e se foi digitado corretamente");
+                Console.WriteLine("  -  Verifique se o valor a ser sacado é numérico");
+                Console.WriteLine();
+            }
 
-            listaContas[indiceConta].Sacar(valorSaque);
-
-            Continue();
+            Utilidades.Continue();
         }
 
         private static void Depositar()
         {
-            LimparTela();
+            Utilidades.LimparTela();
 
-            Head();
+            Utilidades.Head();
 
             try
             {
@@ -191,56 +201,8 @@ namespace Banco
             }
 
 
-            Continue();
+            Utilidades.Continue();
         }
 
-        private static string ObterOpcaoUsuario()
-        {
-            LimparTela();
-
-            Console.WriteLine();
-            Console.WriteLine("==========================");
-            Console.WriteLine("|    Bank ao seu dispor  |");
-            Console.WriteLine("|Informe a opção desejada|");
-            Console.WriteLine("==========================");
-            Console.WriteLine("| 1 - Listar contas      |");
-            Console.WriteLine("| 2 - Inserir nova conta |");
-            Console.WriteLine("| 3 - Transferir         |");
-            Console.WriteLine("| 4 - Sacar              |");
-            Console.WriteLine("| 5 - Depositar          |");
-            Console.WriteLine("| C - Limpar a tela      |");
-            Console.WriteLine("| X - Sair               |");
-            Console.WriteLine("==========================");
-            Console.WriteLine();
-
-            string opcaoUsuario = Console.ReadLine().ToUpper();
-            Console.WriteLine();
-            return opcaoUsuario;
-        }
-
-        private static void LimparTela()
-        {
-            Console.Clear();
-        }
-
-        private static void Continue()
-        {
-            Console.WriteLine();
-            Console.Write("Aperte enter para voltar ao menu");
-            Console.ReadLine();
-        }
-
-        private static void Head()
-        {
-            Console.WriteLine("          =======================");
-            Console.WriteLine("          |        BANK         |");
-            Console.WriteLine("          =======================");
-        }
-
-        private static void ForaDoRange()
-        {
-            Console.WriteLine("Digite alguma opção válida! (Aperte enter para tentar novamente)");
-            Console.ReadLine();
-        }
     }
 }
