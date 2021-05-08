@@ -22,13 +22,13 @@ namespace Banco
                         InserirConta();
                         break;
                     case "3":
-                        //Transferir();
+                        Transferir();
                         break;
                     case "4":
-                        //Sacar();
+                        Sacar();
                         break;
                     case "5":
-                        //Depositar();
+                        Depositar();
                         break;
                     case "C":
                         Console.Clear(); // Limpa terminal
@@ -42,6 +42,43 @@ namespace Banco
 
             Console.WriteLine("Obrigado por utilizar nossos serviços.");
             Console.ReadLine();
+        }
+
+        private static void Transferir()
+        {
+            Console.Write("Digite o número da conta");
+            int indiceContaOrigem = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite a conta que você quer trasnferir");
+            int indiceContaDestino = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor da transferência");
+            double valorTransferencia = double.Parse(Console.ReadLine());
+
+            listaContas[indiceContaOrigem].Transferir(valorTransferencia: valorTransferencia,
+                                                      contaDestino: listaContas[indiceContaDestino]);
+        }
+
+        private static void Depositar()
+        {
+            Console.Write("Digite o número da conta");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o valor a ser depositado");
+            double valorDeposito = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Depositar(valorDeposito);
+        }
+
+        private static void Sacar()
+        {
+            Console.Write("Digite o número da conta");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o quanto você que sacar");
+            double valorSaque = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Sacar(valorSaque);
         }
 
         private static void ListarContas()
