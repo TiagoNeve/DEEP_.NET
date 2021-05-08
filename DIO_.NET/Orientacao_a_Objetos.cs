@@ -42,3 +42,17 @@
     internamente na classe, as públicas podem ser acessadas por objetos e classes que herdam, protegidas podem ser acessadas
     somente pela herança e a classe interna.
 */
+
+// Entenda os diferentes tipos por valor, referência e ponteiros:
+/*
+    Valor -> Todos os tipos de dados são númericos, não é necessário iniciar com [new], a variável armazena o valor 
+    diretamente. Se for atribuido uma variável por outra variável cria-se uma cópia da variável e cria-se uma nova variável.
+    Portanto, deve-se atentar ao manipular as variáveis de valores pois podem gerar um erro de Stack Over Flow. Não podem
+    ter o valor null. Integers, double, floats e chars. São valores numéricos pois necessitam tem um valor bem definido.
+
+    Referência -> Se referencia a variável, portanto se a variável for modificada o valor que estava nessa variável é
+    perdida e substituida pelo novo valor. Matrizes, Strings, Classes, Arrays.
+
+    Ponteiro -> Aponta no local da memória outro um valor que está ocupando este local e atribui o mesmo local a uma nova
+    variável criando a partir de então uma variável por refereência.
+*/
