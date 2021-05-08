@@ -34,7 +34,8 @@ namespace Banco
                         Console.Clear(); // Limpa terminal
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException();
+                        ForaDoRange();
+                        break;
                 }
 
                 opcaoUsuario = ObterOpcaoUsuario();
@@ -44,65 +45,20 @@ namespace Banco
             Console.ReadLine();
         }
 
-        private static void Transferir()
-        {
-            LimparTela();
-
-            Console.Write("Digite o número da conta");
-            int indiceContaOrigem = int.Parse(Console.ReadLine());
-
-            Console.Write("Digite a conta que você quer trasnferir");
-            int indiceContaDestino = int.Parse(Console.ReadLine());
-
-            Console.Write("Digite o valor da transferência");
-            double valorTransferencia = double.Parse(Console.ReadLine());
-
-            listaContas[indiceContaOrigem].Transferir(valorTransferencia: valorTransferencia,
-                                                      contaDestino: listaContas[indiceContaDestino]);
-
-            Continue();
-        }
-
-        private static void Depositar()
-        {
-            LimparTela();
-
-            Console.Write("Digite o número da conta");
-            int indiceConta = int.Parse(Console.ReadLine());
-
-            Console.Write("Digite o valor a ser depositado");
-            double valorDeposito = double.Parse(Console.ReadLine());
-
-            listaContas[indiceConta].Depositar(valorDeposito);
-
-            Continue();
-        }
-
-        private static void Sacar()
-        {
-            LimparTela();
-
-            Console.Write("Digite o número da conta");
-            int indiceConta = int.Parse(Console.ReadLine());
-
-            Console.Write("Digite o quanto você que sacar");
-            double valorSaque = double.Parse(Console.ReadLine());
-
-            listaContas[indiceConta].Sacar(valorSaque);
-
-            Continue();
-        }
-
         private static void ListarContas()
         {
             LimparTela();
 
-            Console.WriteLine("Listagem de contas Ativas");
+            Head();
+
+            Console.WriteLine("    Listagem de contas Ativas    ");
             Console.WriteLine();
 
             if (listaContas.Count == 0)
             {
-                Console.WriteLine("Nenhuma conta cadastrada"); return;
+                Console.WriteLine("Nenhuma conta cadastrada");
+                Continue();
+                return;
             }
 
             for (int i = 0; i < listaContas.Count; i++)
@@ -119,26 +75,121 @@ namespace Banco
         {
             LimparTela();
 
-            Console.WriteLine("Inserir nova conta");
+            Head();
 
-            Console.Write("Digite 1 para a conta Física ou 2 para conta Jurídica: ");
-            int entradaTipoConta = int.Parse(Console.ReadLine());
+            Console.WriteLine("     Inserir nova conta");
 
-            Console.Write("Digite o nome do cliente: ");
-            string entradaNome = Console.ReadLine();
 
-            Console.Write("Digite o saldo inicial: ");
-            double entradaSaldo = double.Parse(Console.ReadLine());
+            try
+            {
+                Console.Write("Digite 1 para a conta Física ou 2 para conta Jurídica: ");
+                int entradaTipoConta = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o crédito: ");
-            double entradaCredito = double.Parse(Console.ReadLine());
+                Console.Write("Digite o nome do cliente: ");
+                string entradaNome = Console.ReadLine();
 
-            Conta novaConta = new Conta(tipoConta: (TipoConta)entradaTipoConta,
-                                        Nome: entradaNome,
-                                        Saldo: entradaSaldo,
-                                        Credito: entradaCredito);
+                Console.Write("Digite o saldo inicial: ");
+                double entradaSaldo = double.Parse(Console.ReadLine());
 
-            listaContas.Add(novaConta); // Adiciona uma nova conta na lista de contas.
+                Console.Write("Digite o crédito: ");
+                double entradaCredito = double.Parse(Console.ReadLine());
+
+                Conta novaConta = new Conta(tipoConta: (TipoConta)entradaTipoConta,
+                                            Nome: entradaNome,
+                                            Saldo: entradaSaldo,
+                                            Credito: entradaCredito);
+
+                listaContas.Add(novaConta); // Adiciona uma nova conta na lista de contas.
+            }
+            catch
+            {
+                Console.WriteLine();
+                Console.WriteLine("Algum erro ocorreu.");
+                Console.WriteLine("  -   Verifique se está digitando os dados corretamente");
+                Console.WriteLine("  -   1 para conta Física ou 2 para conta Jurídica");
+                Console.WriteLine("  -   Os valores de saldo e crédito devem receber números");
+                Console.ReadLine();
+            }
+
+
+
+            Continue();
+        }
+
+        private static void Transferir()
+        {
+            LimparTela();
+
+            Head();
+
+            try
+            {
+                Console.Write("Digite o número da conta: ");
+                int indiceContaOrigem = int.Parse(Console.ReadLine());
+
+                Console.Write("Digite a conta que você quer trasnferir: ");
+                int indiceContaDestino = int.Parse(Console.ReadLine());
+
+                Console.Write("Digite o valor da transferência: ");
+                double valorTransferencia = double.Parse(Console.ReadLine());
+
+                listaContas[indiceContaOrigem].Transferir(valorTransferencia: valorTransferencia,
+                                                          contaDestino: listaContas[indiceContaDestino]);
+            }
+            catch
+            {
+                Console.WriteLine();
+                Console.WriteLine("Algum erro ocorreu");
+                Console.WriteLine("  -  Verifique se o número das contas estão escritas corretamente e são válidas");
+                Console.WriteLine("  -  Verifique se o valor da transferência está escrita de forma numérica");
+                Console.WriteLine();
+
+            }
+
+            Continue();
+        }
+
+        private static void Sacar()
+        {
+            LimparTela();
+
+            Head();
+
+            Console.Write("Digite o número da conta: ");
+            int indiceConta = int.Parse(Console.ReadLine());
+
+            Console.Write("Digite o quanto você que sacar: ");
+            double valorSaque = double.Parse(Console.ReadLine());
+
+            listaContas[indiceConta].Sacar(valorSaque);
+
+            Continue();
+        }
+
+        private static void Depositar()
+        {
+            LimparTela();
+
+            Head();
+
+            try
+            {
+                Console.Write("Digite o número da conta: ");
+                int indiceConta = int.Parse(Console.ReadLine());
+
+                Console.Write("Digite o valor a ser depositado: ");
+                double valorDeposito = double.Parse(Console.ReadLine());
+
+                listaContas[indiceConta].Depositar(valorDeposito);
+            }
+            catch
+            {
+                Console.WriteLine();
+                Console.WriteLine("Algum erro ocorreu");
+                Console.WriteLine("  -  Verifique se o número da conta está escrito corretamente e é válido");
+                Console.WriteLine("  -  Verifique se o valor do depósito é numérico");
+            }
+
 
             Continue();
         }
@@ -150,7 +201,7 @@ namespace Banco
             Console.WriteLine();
             Console.WriteLine("==========================");
             Console.WriteLine("|    Bank ao seu dispor  |");
-            Console.WriteLine("|Informa a opção desejada|");
+            Console.WriteLine("|Informe a opção desejada|");
             Console.WriteLine("==========================");
             Console.WriteLine("| 1 - Listar contas      |");
             Console.WriteLine("| 2 - Inserir nova conta |");
@@ -175,9 +226,21 @@ namespace Banco
         private static void Continue()
         {
             Console.WriteLine();
-            Console.Write("Digite algo para voltar ao menu");
+            Console.Write("Aperte enter para voltar ao menu");
             Console.ReadLine();
         }
 
+        private static void Head()
+        {
+            Console.WriteLine("          =======================");
+            Console.WriteLine("          |        BANK         |");
+            Console.WriteLine("          =======================");
+        }
+
+        private static void ForaDoRange()
+        {
+            Console.WriteLine("Digite alguma opção válida! (Aperte enter para tentar novamente)");
+            Console.ReadLine();
+        }
     }
 }
