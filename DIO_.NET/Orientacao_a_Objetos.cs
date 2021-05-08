@@ -27,3 +27,18 @@
     o código para desenvolver um interface nova e apenas atribuir essa interface ao objeto que é necessário, sem precisar
     excluir algo do código, apenas adicionar alguma coisa nova.
 */
+
+// O que são classes, objetos e visibilidades
+/*
+    Classes -> É como se fosse um molde para um objeto, basicamente você define o que um objeto pode ter no geral na classe
+    instância essa classe e cria-se um objeto com esses dados que foi definido, claro que cada objeto pode ter um dado 
+    diferente, mas sua estrutura é semelhante.
+
+    Objetos -> O que é gerado quando se instância a classe, fazendo isso com a palavra reservada [new]. Assim cira-se um
+    objeto com os atributos e métodos definidos numa classe, dessa forma é possível criar novos objetos com aspectos 
+    diferentes sem precisar ter que ficar digitando o mesmo código toda hora.
+
+    Visibilidade -> Importante para a proteção do código, as privadas só podem ser acessadas e modificadas
+    internamente na classe, as públicas podem ser acessadas por objetos e classes que herdam, protegidas podem ser acessadas
+    somente pela herança e a classe interna.
+*/
