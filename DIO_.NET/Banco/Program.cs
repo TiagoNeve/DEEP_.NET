@@ -10,7 +10,7 @@ namespace Banco
             // Dessa forma é settar um valor do atributo minhaConta sem estragar a classe, pois o valor só será modificado
             // no objeto.
 
-            Console.WriteLine(contaUsuario);
+            Console.WriteLine(contaUsuario.ToString());
         }
     }
 }
