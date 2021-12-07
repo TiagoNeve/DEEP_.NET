@@ -6,6 +6,9 @@ namespace DIO.Series
     {
         static void Main(string[] args)
         {
+            // EntidadeBase minhaClasse = new EntidadeBase();
+            // Serie newObjeto = new Serie();
+            
             Console.WriteLine("Hello World!");
         }
     }
